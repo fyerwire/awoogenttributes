@@ -689,8 +689,7 @@ class ProfileScreen(Screens):
         output += "\n"
         
         #HEIGHT
-        output += 'height: ' + the_cat.pelt.fun_traits[5]
-        output += "\n"
+        
         
         # EYE COLOR
         output += 'eyes: ' + str(the_cat.describe_eyes())
