@@ -205,8 +205,8 @@ class Pelt():
                   "cherry", "kiwi", "fresh bread", "cookies", "peanut butter", "new leaves", "cool air", "warm air", "popcorn", "pizza", "bear", "soap", "beans", "honeydew", "cantalope",
                   "watermelon", "chicken", "rabbit", "granola", "chili", "sulphur", "copper", "acrid", "starch", "brownies", "vanilla", "mango", "tumeric", "smoke", "marshmallow", "sanitizer",
                   "alfredo", "coconut", "gelato", "eggnog", "tangy", "minerals", "sugar", "brown sugar", "gingerbread", "maple"]
-    fun_physical = ["uneven", "fox-like", "plumed tail", "long tail", "large fangs", "long claws", "large ears",
-                    "lynx-like", "cat-like", "dog-like", "dusty", "clean", "oily", "warm", "cold", "large paws", "maned",
+    fun_physical = ["tall", "short", "tiny", "large", "huge", "uneven", "thin", "lanky", "burly", "muscular", "slim", "sleek", "softcoat", "plushcoat", "roughcoat", "fox-like",
+                    "lynx-like", "cat-like", "dog-like", "dusty", "clean", "oily", "silkycoat", "wirecoat", "curlycoat", "woolycoat", "warm", "cold", "giant", "runt", "flimsy",
                     "strong", "kinked tail", "snaggle tooth", "crooked tooth", "no fangs", "no dewclaws", "many whiskers", "large nose", "short tail", "extra toe",
                     "piercing gaze", "soft gaze", "sharp features", "soft features"]
     fun_random = ["terrified of spiders", "extremely loud", "loves the rain", "loves the snow" , "loves the sun", 
@@ -235,9 +235,10 @@ class Pelt():
                   "way too invested", "always lucky", "complains a lot", "giver of compliments", "not very empathetic", "bleeding heart", "never angry", "frequently annoyed", "won't swim",
                   "chirps at birds", "has a long tongue", "abrasive", "likes to chew", "collects sticks", "firestarter", "startles easily", "rarely phased", "always in a phase", "tracks the moon"]
     fur_texture = ["softcoat", "curlycoat", "roughcoat", "silkycoat", "wirecoat", "plushcoat", "woolycoat", "sleek", "wavycoat"]  
-    build = ["stocky", "wiry", "moderate", "medium", "athletic", "thin", "hefty", "muscular", "lanky", "delicate"]
-    height = ["tiny", "short", "average", "tall", "giant"] 
-    
+    build = ["stocky", "moderate", "medium", "athletic", "thin", "hefty", "muscular", "lanky", "delicate"]
+    height = ["tiny", "short", "average", "tall", "giant"]
+
+
     # appearence information
     # when adding to this, make sure it's done twice
     def __init__(self,
@@ -316,7 +317,8 @@ class Pelt():
         self.cat_sprites["sick_adult"] = 18
         self.cat_sprites["sick_young"] = 19
         
-
+        self.reverse = reverse
+        self.skin = skin
 
     @staticmethod
     def generate_new_pelt(gender:str, parents:tuple=(), age:str="adult"):
@@ -338,7 +340,6 @@ class Pelt():
         new_pelt.fun_traits[3] = random.choice(Pelt.fur_texture)
         new_pelt.fun_traits[4] = random.choice(Pelt.build)
         new_pelt.fun_traits[5] = random.choice(Pelt.height)
-        
         
         return new_pelt
     
