@@ -207,7 +207,7 @@ class Pelt():
                   "alfredo", "coconut", "gelato", "eggnog", "tangy", "minerals", "sugar", "brown sugar", "gingerbread", "maple"]
     fun_physical = ["uneven", "fox-like", "plumed tail", "long tail", "large fangs", "long claws", "large ears",
                     "lynx-like", "cat-like", "dog-like", "dusty", "clean", "oily", "warm", "cold", "large paws", "maned",
-                    "strong", "kinked tail", "snaggle tooth", "crooked tooth", "no fangs", "no dewclaws", "many whiskers", "large nose", "short tail", "extra toe",
+                    "strong", "kinked tail", "snaggle tooth", "crooked tooth", "no fangs", "no dewclaws", "double-dew claws", "many whiskers", "large nose", "short tail", "extra toe",
                     "piercing gaze", "soft gaze", "sharp features", "soft features"]
     fun_random = ["terrified of spiders", "extremely loud", "loves the rain", "loves the snow" , "loves the sun", 
                   "loves the taste of pet food", "loves the taste of berries", "collects seashells", "collects feathers", "collects rocks", "collects gems", "collects flowers",
