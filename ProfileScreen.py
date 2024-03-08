@@ -680,10 +680,6 @@ class ProfileScreen(Screens):
         output += 'physical: ' + the_cat.pelt.fun_traits[1]
         output += "\n"
         
-        #FUR TEXTURE
-        output += 'fur texture: ' + the_cat.pelt.fun_traits[3]
-        output += "\n"
-        
         #BUILD
         output += 'build: ' + the_cat.pelt.fun_traits[4]
         output += "\n"
@@ -728,6 +724,10 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+	#FUR TEXTURE
+        output += 'fur texture: ' + the_cat.pelt.fun_traits[3]
+        output += "\n"
+                
         # PELT LENGTH
         output += 'fur length: ' + the_cat.pelt.length
         # NEWLINE ----------
