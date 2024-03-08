@@ -235,9 +235,10 @@ class Pelt():
                   "way too invested", "always lucky", "complains a lot", "giver of compliments", "not very empathetic", "bleeding heart", "never angry", "frequently annoyed", "won't swim",
                   "chirps at birds", "has a long tongue", "abrasive", "likes to chew", "collects sticks", "firestarter", "startles easily", "rarely phased", "always in a phase", "tracks the moon"]
     fur_texture = ["softcoat", "curlycoat", "roughcoat", "silkycoat", "wirecoat", "plushcoat", "woolycoat", "sleek", "wavycoat"]  
-    build = ["stocky", "tiny", "short", "burly", "giant", "wiry", "moderate", "athletic", "thin", "hefty", "muscular", "lanky", "delicate"]
-    height = ["tiny", "short", "average", "tall", "giant"] 
+    build = ["stocky", "tiny", "short", "average", "tall", "giant", "moderate", "athletic", "thin", "hefty", "muscular", "lanky", "delicate"]
     
+
+
     # appearence information
     # when adding to this, make sure it's done twice
     def __init__(self,
@@ -265,7 +266,7 @@ class Pelt():
                  scars:list=None,
                  tint:str="none",
                  skin:str="BLACK",
-                 fun_traits:list=["o", "o", "o", "o", "o", "o"],
+                 fun_traits:list=["o", "o", "o", "o", "o"],
                  white_patches_tint:str="none",
                  kitten_sprite:int=None,
                  adol_sprite:int=None,
@@ -275,7 +276,6 @@ class Pelt():
                  reverse:bool=False,
                  fur_texture:str=None,
                  build:str=None,
-                 height:str=None
                  ) -> None:
         self.name = name
         self.species = species
@@ -316,7 +316,8 @@ class Pelt():
         self.cat_sprites["sick_adult"] = 18
         self.cat_sprites["sick_young"] = 19
         
-
+        self.reverse = reverse
+        self.skin = skin
 
     @staticmethod
     def generate_new_pelt(gender:str, parents:tuple=(), age:str="adult"):
@@ -331,13 +332,12 @@ class Pelt():
         new_pelt.init_tint()
 
         # setting up some sillies
-        new_pelt.fun_traits = ["o", "o", "o", "o", "o", "o"]
+        new_pelt.fun_traits = ["o", "o", "o", "o", "o",]
         new_pelt.fun_traits[0] = random.choice(Pelt.fun_scents)
         new_pelt.fun_traits[1] = random.choice(Pelt.fun_physical)
         new_pelt.fun_traits[2] = random.choice(Pelt.fun_random)
         new_pelt.fun_traits[3] = random.choice(Pelt.fur_texture)
         new_pelt.fun_traits[4] = random.choice(Pelt.build)
-        new_pelt.fun_traits[5] = random.choice(Pelt.height)
         
         
         return new_pelt
